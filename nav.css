@@ -1,0 +1,784 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+header {
+    background: #111;
+    padding: 20px 7%;
+    border-bottom: 1px solid #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: red;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 7%;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.75) 45%,
+        rgba(0, 0, 0, 0.2) 100%
+    ),
+    url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1600&q=80');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: red;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: red;
+}
+
+.hero-content > p:not(.tagline) {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: red;
+}
+
+/* Sections */
+section:not(.hero) {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+section:not(.hero) h2 {
+    font-size: 35px;
+}
+
+
+/* Services */
+#services {
+    background: #111;
+}
+
+#services h2 span {
+    color: red;
+}
+
+.service-intro {
+    color: #aaa;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: red;
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.service-card h4 {
+    color: red;
+    font-size: 20px;
+}
+
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 40px 20px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content > p:not(.tagline) {
+        font-size: 16px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    section:not(.hero) {
+        padding: 40px 20px;
+    }
+
+}
+
+
+/* About Section */
+#about {
+    background: #080808;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.about-text h2 span {
+    color: red;
+}
+
+.about-text > p:not(.tagline) {
+    color: #bbb;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.about-text .btn {
+    margin-top: 15px;
+}
+
+/* About Mobile */
+@media (max-width: 768px) {
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-text > p:not(.tagline) {
+        font-size: 15px;
+    }
+
+}
+
+
+/* About Section */
+#about {
+    background: #080808;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.about-text h2 span {
+    color: red;
+}
+
+.about-text > p:not(.tagline) {
+    color: #bbb;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.about-text .btn {
+    margin-top: 15px;
+}
+
+/* About Mobile */
+@media (max-width: 768px) {
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-text > p:not(.tagline) {
+        font-size: 15px;
+    }
+
+}
+
+
+/* Gallery */
+#gallery {
+    background: #0b0b0b;
+}
+
+#gallery h2 span {
+    color: red;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    height: 300px;
+    border: 1px solid #333;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Gallery Mobile */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+}
+
+footer .logo {
+    margin-bottom: 15px;
+}
+
+footer > p {
+    color: #999;
+    margin: 10px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: red;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Hover */
+nav ul li a {
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* Hero Animation */
+.hero-content {
+    animation: fadeIn 1.2s ease;
+}
+
+/* Service Cards Animation */
+.service-card {
+    animation: fadeIn 1s ease;
+}
+
+/* Button Animation */
+.btn {
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Gallery Animation */
+.gallery-item {
+    transition: 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Premium Mobile Improvements */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 75vh;
+        background-position: 60% center;
+    }
+
+    .tagline {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    /* Services */
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    /* Gallery */
+    .gallery-item {
+        height: 280px;
+    }
+
+    /* About */
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    /* Contact */
+    .contact-container h2 {
+        font-size: 30px;
+    }
+
+    /* Footer */
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+
+
+/* Red Accent Styling */
+#services h2 span,
+#gallery h2 span,
+#about h2 span,
+#contact h2 span {
+    color: #ff2b2b;
+}
+
+/* Section Heading Styling */
+#services h2,
+#gallery h2,
+#about h2,
+#contact h2 {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Card Borders */
+.service-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-card:hover {
+    border: 1px solid #ff2b2b;
+}
+
+/* Opening Hours */
+.opening-hours {
+    margin: 30px 0;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    border-left: 3px solid red;
+}
+
+.opening-hours h3 {
+    margin-bottom: 15px;
+}
+
+.opening-hours p {
+    color: #bbb;
+    margin: 10px 0;
+}
+/* Booking Form */
+.booking-form {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.booking-form h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #1b1b1b;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.booking-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: red;
+}
+
+.booking-form button {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="time"] {
+    color-scheme: dark;
+}
+
+/* Better Mobile Navigation */
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Section Divider */
+#services,
+#gallery,
+#about,
+#contact {
+    border-top: 1px solid rgba(255, 0, 0, 0.15);
+}
+
+/* Premium Service Card Effect */
+.service-card {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.12);
+}
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: red;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+}
+
+#scrollTopBtn:hover {
+    background: white;
+    color: red;
+    transform: translateY(-3px);
+}
+#reviews {
+    background: #111;
+}
+
+#reviews h2 span {
+    color: #ff2b2b;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.review-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: left;
+    transition: .3s;
+}
+
+.review-card:hover {
+    border-color: #ff2b2b;
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: gold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.review-card h3 {
+    color: white;
+    font-size: 17px;
+}
+@media(max-width:768px) {
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+}
+/* Premium review effects */
+.review-card {
+    transition: all 0.4s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 0, 0, 0.15);
+}
+
+.stars {
+    letter-spacing: 3px;
+}
+
+/* Section heading effect */
+section h2 {
+    transition: .3s ease;
+}
+
+/* Selection color */
+::selection {
+    background: red;
+    color: white;
+}
